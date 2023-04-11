@@ -11,19 +11,20 @@ import java.sql.SQLException;
 public class Main {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
         UserService userService = new UserServiceImpl();
-         userService.dropUsersTable();
-        //userService.cleanUsersTable();
-//
-//        userService.createUsersTable();
-//
-//        userService.saveUser("Коля", "Иванов", (byte) 23);
-//        userService.saveUser("Иван", "Шишкин", (byte) 56);
-//        userService.saveUser("Александр", "Пушкин", (byte) 32);
-//        userService.removeUserById(2);
-          userService.getAllUsers();
-//
-//        userService.cleanUsersTable();
-//        userService.dropUsersTable();
-        //userService.dropUsersTable();
+
+        userService.createUsersTable();
+
+        userService.saveUser("Коля", "Иванов", (byte) 23);
+        userService.saveUser("Иван", "Шишкин", (byte) 56);
+        userService.saveUser("Александр", "Пушкин", (byte) 32);
+
+
+        userService.removeUserById(2);
+
+        userService.getAllUsers();
+
+        userService.cleanUsersTable();
+
+        userService.dropUsersTable();
     }
 }
